@@ -40,7 +40,7 @@ headsetcontrol -o json | jq
 Clone anywhere and symlink the script into your Waybar config dir:
 
 ```sh
-git clone <this-repo> ~/repos/waybar-headset-battery
+git clone https://github.com/drumdidam/waybar-headset-battery.git ~/repos/waybar-headset-battery
 ln -sf ~/repos/waybar-headset-battery/headset-battery.sh \
        ~/.config/waybar/headset-battery.sh
 ```
