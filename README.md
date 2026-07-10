@@ -10,24 +10,17 @@ Corsair, Razer, …).
 
 ![status](https://img.shields.io/badge/status-works%20on%20my%20machine-green)
 
-## What it shows
-
-| State            | Output        | CSS class                    |
-|------------------|---------------|------------------------------|
-| Normal           | ` 80%`       | `good` / `warning` / `critical` |
-| Charging         | ` `          | `charging`                   |
-| Level unknown    | ``           | `unknown` (off / standby)    |
-| No headset       | ``           | `disconnected`               |
-| HeadsetControl missing | (empty) | `disconnected`               |
-
-Thresholds: `critical <= 20%`, `warning <= 40%`, otherwise `good`.
-The tooltip shows the device name and exact percentage.
-
 ## Requirements
 
 - `headsetcontrol` (Arch: `pacman -S headsetcontrol`)
 - `jq`
-- A Nerd Font in your Waybar (for the  glyphs)
+- A **Nerd Font** for the headphones / plug glyphs (Arch:
+  `pacman -S ttf-nerd-fonts-symbols`, or any Nerd Font). Add it to your Waybar
+  `font-family` **fallback**, otherwise the glyphs render blank:
+
+  ```css
+  font-family: 'YourFont', 'JetBrainsMono Nerd Font', monospace;
+  ```
 
 Verify your headset is detected:
 
