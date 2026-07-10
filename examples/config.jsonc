@@ -1,0 +1,16 @@
+// Add "custom/headset" to your modules-left / -center / -right array, e.g.:
+//
+//   "modules-right": [
+//     "network",
+//     "custom/headset",
+//     "pulseaudio"
+//   ],
+//
+// and define the module:
+
+"custom/headset": {
+  "return-type": "json",
+  "interval": 30,
+  "exec": "$HOME/.config/waybar/headset-battery.sh",
+  "on-click": "$HOME/.config/waybar/headset-battery.sh"
+}

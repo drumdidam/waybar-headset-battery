@@ -1,0 +1,29 @@
+/* Colors follow a warm/earthy theme — adjust to your palette. */
+
+#custom-headset {
+	color: #7da47a; /* good */
+	padding: 0 10px;
+}
+
+@keyframes headset-charging-pulse {
+	from { color: #7da47a; }
+	to   { color: #d9b45a; }
+}
+
+#custom-headset.charging {
+	color: #d9b45a; /* pulses while charging */
+	animation: headset-charging-pulse 1.2s ease-in-out infinite alternate;
+}
+
+#custom-headset.warning {
+	color: #c4956a; /* <= 40% */
+}
+
+#custom-headset.critical {
+	color: #c67777; /* <= 20% */
+}
+
+#custom-headset.disconnected,
+#custom-headset.unknown {
+	color: #938e87; /* no headset / off */
+}
